@@ -31,7 +31,14 @@ fn main() {
         Ok(_) => {
             println!("Success, daemonized");
         let _data = device_state.on_key_up(|key|{
-                              println!("-> key :: {:#?}",key);
+                             //todo! processing the data
+                              match key {
+                            Keycode::Enter => {
+                                //println!("-> key :: {:#?}",Keycode::Enter);
+                                println!("");
+                        }
+                            other=> print!("{:#?}",other),
+                              }
                             });
         let _data_ = device_state.on_mouse_up(|mouse|{
                               println!("-> mouse :: {:#?}",mouse);
